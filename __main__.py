@@ -1,11 +1,11 @@
-from parser import Parser
+from parser import CalendarDict
 
-# parser = Parser("jane_table/monthly_view.csv") # command line
-# print(parser.table_dict["Post Title"])
-# print(parser.table_dict["Status"])
-# print(parser.table_dict["Publish Date / Time"])
-# print(parser.table_dict["Issue"])
-# print(parser.table_dict["Author"])
+# c_dict1 = CalendarDict("jane_table/monthly_view.csv") # command line
+# print(c_dict1.table_dict_cols["Post Title"])
+# print(c_dict1.table_dict_cols["Status"])
+# print(c_dict1.table_dict_cols["Publish Date / Time"])
+# print(c_dict1.table_dict_cols["Issue"])
+# print(c_dict1.table_dict_cols["Author"])
 
 """
  - Get csv file path from user
@@ -14,9 +14,11 @@ from parser import Parser
  - Loop through OrderedDict and fill markdown table template
 """
 
-parser2 = Parser("monthly_view.csv") # IDE
-print(parser2.table_dict["Post Title"])
-print(parser2.table_dict["Status"])
-print(parser2.table_dict["Publish Date / Time"])
-print(parser2.table_dict["Issue"])
-print(parser2.table_dict["Author"])
+c_dict2 = CalendarDict("monthly_view.csv")  # IDE
+# print(c_dict2.table_dict_cols["Post Title"])
+# print(c_dict2.table_dict_cols["Status"])
+# print(c_dict2.table_dict_cols["Publish Date / Time"])
+# print(c_dict2.table_dict_cols["Issue"])
+# print(c_dict2.table_dict_cols["Author"])
+
+print(c_dict2.table_dict_rows)

@@ -27,6 +27,6 @@
       <td>col3,row3</td>
       <td>col4,row3</td>
       <td>col5,row3</td>
-    </tr>
+    </tr>  
   </tbody>
 </table>

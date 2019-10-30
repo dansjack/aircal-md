@@ -1,1 +1,1 @@
-from .csv_parser import Parser
+from .calendar_dict import CalendarDict
