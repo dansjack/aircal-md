@@ -1,4 +1,5 @@
 import csv
+from collections import OrderedDict
 
 
 class Parser:
@@ -15,7 +16,7 @@ class Parser:
         Read and sort a csv file into a dictionary
         :returns: dictionary
         """
-        table_dict = dict()
+        table_dict = OrderedDict()
         with open(self.__csv_file, newline="", encoding='utf-8-sig') as csv_file:
             reader = csv.reader(csv_file)
             for row in reader:
@@ -36,11 +37,3 @@ class Parser:
     def table_dict(self):
         """:returns: dictionary"""
         return self.__table_dict
-
-
-parser = Parser("../monthly_view.csv")
-print(parser.table_dict["Post Title"])
-print(parser.table_dict["Status"])
-print(parser.table_dict["Publish Date / Time"])
-print(parser.table_dict["Issue"])
-print(parser.table_dict["Author"])
