@@ -37,3 +37,7 @@ class Parser:
     def table_dict(self):
         """:returns: dictionary"""
         return self.__table_dict
+
+    def __str__(self):
+        return ''.join('{}{}'.format(key, val) for key, val in
+                       self.table_dict.items())
