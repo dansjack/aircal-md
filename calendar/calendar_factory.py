@@ -36,5 +36,5 @@ class CalendarFactory:
 
     def write_to_file(self):
         """Writes the calendar to file"""
-        with open(self.out_file + ".md", "w") as f:
+        with open(self.out_file, "w") as f:
             f.write(self.calendar)
