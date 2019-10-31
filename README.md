@@ -36,7 +36,7 @@ This calendar...
 ## Getting started
 
 ### Prerequisites 
-- Python
+- Python3
     ```sh
     brew install python3
     ```
@@ -48,7 +48,7 @@ This calendar...
     ```
 2. start the program
     ```sh
-    python airtable-markdown-calendar
+    python3 airtable-markdown-calendar
     ```
 3. Follow the prompt to generate a calendar. The calendar will appear under the airtable-markdown-calendar
 directory
