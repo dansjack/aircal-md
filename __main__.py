@@ -1,6 +1,6 @@
 from calendar import CalendarDict, CalendarFactory
 
-print("*****************************************")
+print("\n\n*****************************************")
 print("***** AIRTABLE TO MARKDOWN CALENDAR *****")
 print("*****************************************\n")
 
