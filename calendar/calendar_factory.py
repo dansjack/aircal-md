@@ -35,6 +35,8 @@ class CalendarFactory:
         return row_string
 
     def _write_to_file(self):
-        """Writes the calendar to file"""
+        """Writes the calendar to a file"""
         with open(self._out_file, "w") as f:
+            if self._out_file[-3:] is not ".md":
+                self._out_file += ".md"
             f.write(self._calendar)
