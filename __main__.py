@@ -1,15 +1,10 @@
 from calendar import CalendarDict, CalendarFactory
+from ui import UserInterface
 
-print("\n\n*****************************************")
-print("***** AIRTABLE TO MARKDOWN CALENDAR *****")
-print("*****************************************\n")
 
-csv = input("Enter the relative path of an Airtable csv file: ")
-calendar_name = input("Enter the name of your new calendar: ") + ".md"
+UserInterface().print_greeting()
+in_file = UserInterface.get_infile_path()
+rows = CalendarDict(in_file).table_rows
+CalendarFactory(rows, UserInterface.get_outfile_path())
 
-calendar_dict = CalendarDict(csv).table_rows
-CalendarFactory(calendar_dict, calendar_name)
-
-print("\n*****************************")
-print("********** GOODBYE **********")
-print("*****************************")
+UserInterface().print_goodbye()

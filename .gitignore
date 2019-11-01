@@ -3,3 +3,4 @@
 __pycache__/
 calendar/__pycache__/
 *.pyc
+test_infile.csv
