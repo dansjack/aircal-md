@@ -16,6 +16,9 @@ class UserInterface:
         while True:
             try:
                 csv = input("Enter the relative path of an Airtable csv file: ")
+                if not csv.endswith(".csv"):
+                    csv += ".csv"
+                    print(csv)
                 break
             except FileNotFoundError:
                 print('''Sorry, there is no file by that name at that path.\n''')
