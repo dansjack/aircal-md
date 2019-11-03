@@ -10,9 +10,9 @@ class CalendarDict:
     def __init__(self, csv_file):
         self._csv_file = csv_file
         self._count = 0
-        self._table_rows = self._fill_dict_by_row()
+        self._table_rows = self._fill_list()
 
-    def _fill_dict_by_row(self):
+    def _fill_list(self):
         """:returns a list of dictionaries"""
         rows = list()
         while True:
