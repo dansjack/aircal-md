@@ -23,8 +23,7 @@ class CalendarFactory:
             row_string += "    <tr>\n"
             for value in row.values():
                 if value.startswith("http"):
-                    start_slice = value.rfind("/") + 1
-                    issue_number = value[start_slice:]
+                    issue_number = value[value.rfind("/") + 1:]
                     row_string += '      <td><a href="{}">#{}</a></td>\n'.format(
                         value, issue_number)
                 else:
