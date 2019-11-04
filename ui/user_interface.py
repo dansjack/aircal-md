@@ -1,3 +1,7 @@
+import sys
+from calendar import CalendarDict, CalendarFactory
+
+
 class UserInterface:
     @staticmethod
     def print_greeting():
@@ -12,22 +16,43 @@ class UserInterface:
         print("*****************************\n ")
 
     @staticmethod
-    def get_infile_path():
-        while True:
-            try:
-                csv = input("Enter the relative path of an Airtable csv file: ")
-                if not csv.endswith(".csv"):
-                    csv += ".csv"
-                    print(csv)
-                break
-            except FileNotFoundError:
-                print('''Sorry, there is no file by that name at that path.\n''')
-        return csv
+    def validate_infile(file):
+        """:returns an Airtable csv file"""
+        if not file.endswith(".csv"):
+            file += ".csv"
+        try:
+            f = open(file)
+            f.close()
+            return True
+        except FileNotFoundError:
+            return False
 
     @staticmethod
-    def get_outfile_path():
+    def main():
+        UserInterface.print_greeting()
+        user_infile = input("Enter the relative path of an Airtable csv "
+                           "file: ")
         while True:
-            calendar_name = input("Enter the name of your new calendar: ")
-            break
-        return calendar_name
+            if user_infile.lower().startswith("q"):  # user quits loop
+                break
+
+            if not user_infile.endswith(".csv"):
+                user_infile += ".csv"
+
+            if UserInterface.validate_infile(user_infile): # infile valid
+                user_outfile = input("Enter the name of your new calendar: ")
+
+                if user_infile.lower().startswith("q"):  # user quits loop
+                    break
+
+                rows = CalendarDict(user_infile).table_rows
+                CalendarFactory(rows, user_outfile)
+                break
+            else:
+                print("File not found at that location, please try again")
+                user_infile = input("Enter the relative path of an Airtable csv "
+                                   "file: ")
+
+        UserInterface.print_goodbye()
+
 
