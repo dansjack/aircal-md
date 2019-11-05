@@ -1,4 +1,4 @@
-import csv, sys
+import csv
 
 
 class CalendarDict:

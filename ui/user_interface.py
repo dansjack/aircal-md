@@ -1,4 +1,3 @@
-import sys
 from calendar import CalendarDict, CalendarFactory
 
 
