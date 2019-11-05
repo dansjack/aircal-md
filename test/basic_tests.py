@@ -1,25 +1,30 @@
 from calendar import CalendarDict, CalendarFactory
-from ui import UserInterface
 from collections import OrderedDict
 import unittest
 
-# CalendarFactory(CalendarDict(
-#
-#  UserInterface.get_infile_path()).table_rows,
-#   UserInterface.get_outfile_path())
-
 
 class InputTests(unittest.TestCase):
+    def setUp(self):
+        self.table_rows = CalendarDict("test_infile.csv").table_rows
+        self.out_file = "test_outfile.md"
 
     def test_calendar_dict(self):
         """
         Tests whether a CalendarDict Instance's table_rows variable is a list
         of dictionaries
         """
-        table_rows = CalendarDict("test_infile.csv").table_rows
-        self.assertIsInstance(table_rows, list)
-        for row in range(len(table_rows) - 1):
-            self.assertIsInstance(table_rows[row], OrderedDict)
+
+        # CalendarDict's table_rows returns a list
+        self.assertIsInstance(self.table_rows, list)
+        for row in range(len(self.table_rows) - 1):
+            # Each row in the list is an OrderedDict
+            self.assertIsInstance(self.table_rows[row], OrderedDict)
+
+    def test_calendar_factory(self):
+        """
+        Tests whether the CalendarFactory creates a markdown calendar
+        """
+        CalendarFactory(self.table_rows, self.out_file)
 
     def test_ui_infile(self):
         """
