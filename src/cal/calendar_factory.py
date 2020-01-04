@@ -1,5 +1,5 @@
 class CalendarFactory:
-    """Creates a markdown calendar from a
+    """Creates a markdown cal from a
     list of dictionaries and outputs to a file"""
     def __init__(self, list_of_rows, out_file):
         self._list_of_rows = list_of_rows
@@ -34,7 +34,7 @@ class CalendarFactory:
         return row_string
 
     def _write_to_file(self):
-        """Writes the calendar to a file"""
+        """Writes the cal to a file"""
         if self._out_file[-3:] is not".md":
             self._out_file += ".md"
         with open(self._out_file, "w") as f:

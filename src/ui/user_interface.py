@@ -1,5 +1,5 @@
-import sys
-from calendar import CalendarDict, CalendarFactory
+from src.cal.calendar_dict import CalendarDict
+from src.cal.calendar_factory import CalendarFactory
 
 
 class UserInterface:
@@ -40,7 +40,7 @@ class UserInterface:
                 user_infile += ".csv"
 
             if UserInterface.validate_infile(user_infile): # infile valid
-                user_outfile = input("Enter the name of your new calendar: ")
+                user_outfile = input("Enter the name of your new cal: ")
 
                 if user_infile.lower().startswith("q"):  # user quits loop
                     break

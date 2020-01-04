@@ -1,6 +1,6 @@
 /.idea
 /venv
 __pycache__/
-calendar/__pycache__/
+src/cal/__pycache__/
 *.pyc
-test_infile.csv
+.DS_Store

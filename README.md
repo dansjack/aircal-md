@@ -21,7 +21,7 @@ Takes an Airtable calendar csv and turns it into a markdown calendar (Compatible
     <tr>
       <td>Post 2</td>
       <td>Stat 2</td>
-      <td>Date 2</td>
+      <td>Date 2</td>Â
       <td><a href="https://github.com/blog/issues/2">#2</a></td>
       <td>Author 2</td>
     </tr>
