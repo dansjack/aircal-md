@@ -1,5 +1,5 @@
 from collections import OrderedDict
-from src.cal.calendar_dict import CalendarDict
+from cal.calendar_dict import CalendarDict
 import unittest
 
 

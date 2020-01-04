@@ -59,7 +59,7 @@ directory
 ***** AIRTABLE TO MARKDOWN CALENDAR *****
 *****************************************
 
-Enter the relative path of an Airtable csv file: src/test/test_infile
+Enter the relative path of an Airtable csv file: test/test_infile
 Enter the name of your new calendar: my_new_calendar
 
 *****************************
@@ -67,4 +67,4 @@ Enter the name of your new calendar: my_new_calendar
 *****************************
 
 ```
-&nbsp; &nbsp; &nbsp; &nbsp; New calendar now at `airtable-markdown-calendar/my_new_calendar`
+&nbsp; &nbsp; &nbsp; &nbsp; New calendar now at `airtable-markdown-calendar/results/my_new_calendar`

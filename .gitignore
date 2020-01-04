@@ -1,6 +1,6 @@
 /.idea
 /venv
 __pycache__/
-src/cal/__pycache__/
+cal/__pycache__/
 *.pyc
 .DS_Store
