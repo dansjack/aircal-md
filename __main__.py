@@ -1,5 +1,3 @@
-from ui.user_interface import UserInterface
-import os
+from user_interface import UserInterface
 
-os.chdir("airtable-markdown-calendar")
 UserInterface().main()

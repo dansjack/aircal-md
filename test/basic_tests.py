@@ -1,6 +1,7 @@
-from collections import OrderedDict
-from cal.calendar_dict import CalendarDict
 import unittest
+from collections import OrderedDict
+
+from calendar_dict import CalendarDict
 
 
 class InputTests(unittest.TestCase):

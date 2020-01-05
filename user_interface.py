@@ -1,5 +1,7 @@
-from cal.calendar_dict import CalendarDict
-from cal.calendar_factory import CalendarFactory
+from pathlib import Path
+
+from calendar_dict import CalendarDict
+from calendar_factory import CalendarFactory
 
 
 class UserInterface:
@@ -18,6 +20,7 @@ class UserInterface:
     @staticmethod
     def validate_infile(file):
         """:returns an Airtable csv file"""
+        file = str(file)
         if not file.endswith(".csv"):
             file += ".csv"
         try:
@@ -39,20 +42,20 @@ class UserInterface:
             if not user_infile.endswith(".csv"):
                 user_infile += ".csv"
 
+            user_infile = (Path(__file__).parent / user_infile).resolve()
+
             if UserInterface.validate_infile(user_infile):  # infile valid
                 user_outfile = input("Enter the name of your new cal: ")
 
-                if user_infile.lower().startswith("q"):  # user quits loop
+                if str(user_infile).lower().startswith("q"):  # user quits loop
                     break
 
                 rows = CalendarDict(user_infile).table_rows
                 CalendarFactory(rows, user_outfile)
                 break
             else:
-                print("File not found at that location, please try again")
+                print("File not found at '{}', please try again".format(user_infile))
                 user_infile = input("Enter the relative path of an Airtable csv "
                                    "file: ")
 
         UserInterface.print_goodbye()
-
-

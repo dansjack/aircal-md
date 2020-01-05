@@ -1,3 +1,6 @@
+from pathlib import Path
+
+
 class CalendarFactory:
     """Creates a markdown cal from a
     list of dictionaries and results to a file"""
@@ -37,5 +40,6 @@ class CalendarFactory:
         """Writes the cal to a file"""
         if self._out_file[-3:] is not".md":
             self._out_file += ".md"
-        with open('results/' + self._out_file, "w") as f:
+        file_path = (Path(__file__).parent / str("results/" + self._out_file)).resolve()
+        with open(file_path, "w") as f:
             f.write(self._calendar)
