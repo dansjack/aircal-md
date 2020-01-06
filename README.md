@@ -1,4 +1,4 @@
-# Airtable Markdown Calendar
+# aircal-md
 
 ## About
 Takes an Airtable calendar csv and turns it into a markdown calendar (Compatible with GFM).
@@ -27,11 +27,15 @@ Takes an Airtable calendar csv and turns it into a markdown calendar (Compatible
     </tr>
   </tbody>
 </table><br  />
-
 This calendar...
 - Trims any leading/trailing whitespace from each table cell
 - Replaces links to GitHub issues with shorter text (e.g. #42)
 - Aligns all table data to the left
+
+### Development plans
+- [ ] Add option to choose result file location
+- [ ] Add option to connect to the Airtable API to get a calendar instead of a csv file
+- [ ] Add options to add/remove fields from the calendar
 
 ## Getting started
 
@@ -44,13 +48,13 @@ This calendar...
 ### Installation & Usage
 1. Clone the repo
     ```sh
-    git clone https://github.com/dansjack/airtable-markdown-calendar.git
+    git clone https://github.com/dansjack/aircal-md.git
     ```
 2. start the program
     ```sh
-    python3 airtable-markdown-calendar
+    python3 aircal-md
     ```
-3. Follow the prompt to generate a calendar. The calendar will appear under the airtable-markdown-calendar
+3. Follow the prompt to generate a calendar. The calendar will appear under the aircal-md
 directory
 
 &nbsp; &nbsp; &nbsp; &nbsp; _Example_: Answer the prompts as they're shown below to print an example calendar<br>
@@ -67,4 +71,4 @@ Enter the name of your new calendar: my_new_calendar
 *****************************
 
 ```
-&nbsp; &nbsp; &nbsp; &nbsp; New calendar now at `airtable-markdown-calendar/results/my_new_calendar`
+&nbsp; &nbsp; &nbsp; &nbsp; New calendar now at `aircal-md/results/my_new_calendar`
