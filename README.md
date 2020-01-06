@@ -29,7 +29,7 @@ Takes an Airtable calendar csv and turns it into a markdown calendar (Compatible
 </table><br  />
 This calendar...
 - Trims any leading/trailing whitespace from each table cell
-- Replaces links to GitHub issues with shorter text (e.g. #42)
+- Shortens link text (e.g. Link to a GitHub Issue would just state the number, like #42)
 - Aligns all table data to the left
 
 ### Development plans
@@ -57,7 +57,7 @@ This calendar...
 3. Follow the prompt to generate a calendar. The calendar will appear under the aircal-md
 directory
 
-&nbsp; &nbsp; &nbsp; &nbsp; _Example_: Answer the prompts as they're shown below to print an example calendar from the []Airtable content production template calendar](https://airtable.com/templates/content-production/exp3FNmOkdHZvprXB/digital-content-calendar)<br>
+&nbsp; &nbsp; &nbsp; &nbsp; _Example_: Answer the prompts as they're shown below to print an example calendar from the [Airtable content production template calendar](https://airtable.com/templates/content-production/exp3FNmOkdHZvprXB/digital-content-calendar)<br>
 ```sh
 *****************************************
 *************   AIRCAL-MD   *************
