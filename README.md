@@ -57,7 +57,7 @@ This calendar...
 3. Follow the prompt to generate a calendar. The calendar will appear under the aircal-md
 directory
 
-&nbsp; &nbsp; &nbsp; &nbsp; _Example_: Answer the prompts as they're shown below to print an example calendar from the [Airtable content production template calendar](https://airtable.com/templates/content-production/exp3FNmOkdHZvprXB/digital-content-calendar)<br>
+&nbsp; &nbsp; &nbsp; &nbsp; _Example_: Answer the prompts as they're shown below to print an example calendar from the [Airtable content calendar template](https://airtable.com/templates/content-production/exp3FNmOkdHZvprXB/digital-content-calendar)<br>
 ```sh
 *****************************************
 *************   AIRCAL-MD   *************
