@@ -60,7 +60,7 @@ directory
 &nbsp; &nbsp; &nbsp; &nbsp; _Example_: Answer the prompts as they're shown below to print an example calendar<br>
 ```sh
 *****************************************
-***** AIRTABLE TO MARKDOWN CALENDAR *****
+*************   AIRCAL-MD   *************
 *****************************************
 
 Enter the relative path of an Airtable csv file: test/test_infile

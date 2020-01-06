@@ -1,5 +1,4 @@
 from pathlib import Path
-
 from calendar_dict import CalendarDict
 from calendar_factory import CalendarFactory
 
@@ -8,7 +7,7 @@ class UserInterface:
     @staticmethod
     def print_greeting():
         print("\n\n*****************************************")
-        print("***** AIRTABLE TO MARKDOWN CALENDAR *****")
+        print("*************   AIRCAL-MD   *************")
         print("*****************************************\n")
 
     @staticmethod
