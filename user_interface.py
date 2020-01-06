@@ -1,6 +1,6 @@
 from pathlib import Path
-from calendar_dict import CalendarDict
-from calendar_factory import CalendarFactory
+from cal.calendar_dict import CalendarDict
+from cal.calendar_factory import CalendarFactory
 
 
 class UserInterface:
