@@ -1,7 +1,7 @@
 # aircal-md
 
 ## About
-Takes an Airtable calendar csv and turns it into a markdown calendar (Compatible with GFM).
+Aircal-md takes a csv file of an Airtable calendar as input, reads it, and outputs a markdown version of the calendar. (Compatible with Github Flavored Markdown).
 <table>
   <tbody align="left">
   <tr>
