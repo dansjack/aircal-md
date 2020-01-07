@@ -41,24 +41,28 @@ This calendar:
 ## Getting started
 
 ### Prerequisites
-- Python3
-    ```sh
-    brew install python3
-    ```
+- Python3  
+
+
+  There are different ways you can install Python. See [The Hitchhikers Guide to Python](https://docs.python-guide.org/starting/installation/) for detailed instructions. If you have Homebrew installed already, you can run the following to install Python3:
+  
+  ```sh
+  $ brew install python
+  ```
 
 ### Installation & Usage
 1. Clone the repo
     ```sh
-    git clone https://github.com/dansjack/aircal-md.git
+    $ git clone https://github.com/dansjack/aircal-md.git
     ```
 2. start the program
     ```sh
-    python3 aircal-md
+    $ python3 aircal-md
     ```
 3. Follow the prompt to generate a calendar. The calendar will appear under the aircal-md
 directory
 
-    &nbsp; &nbsp; &nbsp; &nbsp; _Example_: Answer the prompts as they're shown below to print an example calendar from the [Airtable content calendar template](https://airtable.com/templates/content-production/exp3FNmOkdHZvprXB/digital-content-calendar)<br>
+    _Example_: Answer the prompts as they're shown below to print an example calendar from the [Airtable content calendar template](https://airtable.com/templates/content-production/exp3FNmOkdHZvprXB/digital-content-calendar)<br>
       ```
       *****************************************
       *************   AIRCAL-MD   *************
@@ -72,4 +76,4 @@ directory
       *****************************
 
       ```
-&nbsp; &nbsp; &nbsp; &nbsp; New calendar now at `aircal-md/results/my_new_calendar`
+  New calendar now at `aircal-md/results/my_new_calendar`
