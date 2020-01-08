@@ -3,11 +3,14 @@ import csv
 
 class CalendarDict:
     """
-    Takes a csv file and filters the data into a dictionary.
-      keys:   Column titles
-      values: Column values
+    Takes a csv file and puts the data in a list of dicts.
     """
+
     def __init__(self, csv_file):
+        """
+
+        :param csv_file:
+        """
         self._csv_file = csv_file
         self._count = 0
         self._table_rows = self._fill_list()

@@ -18,12 +18,9 @@ class UserInterface:
 
     @staticmethod
     def validate_infile(file):
-        """:returns an Airtable csv file"""
-        file = str(file)
-        if not file.endswith(".csv"):
-            file += ".csv"
+        """:return boolean. true if file exists at path. false if not """
         try:
-            f = open(file)
+            f = open(str(file))
             f.close()
             return True
         except FileNotFoundError:
@@ -44,6 +41,7 @@ class UserInterface:
             user_infile = (Path(__file__).parent / user_infile).resolve()
 
             if UserInterface.validate_infile(user_infile):  # infile valid
+                print(user_infile)
                 user_outfile = input("Enter the name of your new cal: ")
 
                 if str(user_infile).lower().startswith("q"):  # user quits loop
