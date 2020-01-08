@@ -41,7 +41,6 @@ class UserInterface:
             user_infile = (Path(__file__).parent / user_infile).resolve()
 
             if UserInterface.validate_infile(user_infile):  # infile valid
-                print(user_infile)
                 user_outfile = input("Enter the name of your new cal: ")
 
                 if str(user_infile).lower().startswith("q"):  # user quits loop

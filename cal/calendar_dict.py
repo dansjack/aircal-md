@@ -8,11 +8,9 @@ class CalendarDict:
 
     def __init__(self, csv_file):
         """
-
-        :param csv_file:
+        :param csv_file: Airtable calendar csv file path
         """
         self._csv_file = csv_file
-        self._count = 0
         self._table_rows = self._fill_list()
 
     def _fill_list(self):

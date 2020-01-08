@@ -2,9 +2,14 @@ from pathlib import Path
 
 
 class CalendarFactory:
-    """Creates a markdown cal from a
-    list of dictionaries and results to a file"""
+    """Creates a markdown calendar from a
+    list of dictionaries and outputs it to a file"""
     def __init__(self, list_of_rows, out_file):
+        """
+        :param list_of_rows: List<dict>. list of calendar rows from an
+        Airtable calendar csv
+        :param out_file: file name to push results to
+        """
         self._list_of_rows = list_of_rows
         self._out_file = out_file
         self._calendar = self._make_title_row() + self._make_rows()
@@ -37,7 +42,7 @@ class CalendarFactory:
         return row_string
 
     def _write_to_file(self):
-        """Writes the cal to a file"""
+        """Writes the calendar to a file"""
         if self._out_file[-3:] is not".md":
             self._out_file += ".md"
         file_path = (Path(__file__).parent.parent / str("results/" +
