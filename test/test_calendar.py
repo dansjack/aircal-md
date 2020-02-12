@@ -1,4 +1,5 @@
 import unittest
+
 from collections import OrderedDict
 from cal.calendar_dict import CalendarDict
 
@@ -6,10 +7,12 @@ from cal.calendar_dict import CalendarDict
 class InputTests(unittest.TestCase):
 
     def setUp(self):
-        self.data = '../test_infile.csv'
-        self.table_rows = CalendarDict("../test_infile.csv").table_rows
+        self.table_rows = CalendarDict("test_infile.csv").table_rows
 
     def test_cal_headers(self):
+        """
+        Tests for expected calendar headers
+        """
         self.assertEqual(list(self.table_rows[0].keys()),
                          ['Headline', 'Status', 'Section', 'Author',
                           'Draft due', 'Publish date', 'Link', 'Social posts'])
@@ -24,3 +27,6 @@ class InputTests(unittest.TestCase):
         for row in range(len(self.table_rows) - 1):
             self.assertIsInstance(self.table_rows[row], OrderedDict)
 
+
+if __name__ == '__main__':
+    unittest.main()
