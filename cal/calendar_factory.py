@@ -30,10 +30,16 @@ class CalendarFactory:
         for row in self._list_of_rows:
             row_string += "    <tr>\n"
             for value in row.values():
-                if value.startswith("http"):
-                    issue_number = value[value.rfind("/") + 1:]
+                if value.endswith('/'):
+                    value = value[:-1]
+                if 'issues/' in value and value.startswith('http'):
+                    issue_number = value[value.rfind('/') + 1:]
                     row_string += '      <td><a href="{}">#{}</a></td>\n'.format(
                         value, issue_number)
+                elif value.startswith('http'):
+                    link_title = value[value.rfind('/') + 1:]
+                    row_string += '      <td><a href="{}">{}</a></td>\n'.format(
+                        value, link_title)
                 else:
                     row_string += "      <td>{}</td>\n".format(value)
             row_string += "    </tr>\n"
